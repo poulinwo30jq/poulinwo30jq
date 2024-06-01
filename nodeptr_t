@@ -1,0 +1,18 @@
+void clear(nodeptr_t bulletlist, nodeptr_t targetlist)
+ {
+     while (bulletlist->next != nullptr)
+     {
+         nodeptr_t temp = bulletlist->next;
+         bulletlist->next = temp->next;
+         //temp->next = nullptr;
+         free(temp);
+     }
+     while (targetlist->next != nullptr)
+     {
+         nodeptr_t temp = targetlist->next;
+         targetlist->next = temp->next;
+         //temp->next = nullptr;
+         free(temp);
+     }
+     return;
+ }
