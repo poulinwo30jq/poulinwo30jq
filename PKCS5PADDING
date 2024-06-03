@@ -1,0 +1,5 @@
+    if(fillingMode == PKCS5PADDING && data_lenght % 8 != 0)
+    {
+        for(int i=0;i<8-(data_lenght%8);i++)
+        {
+            unsigned char num = (8 - (data_lenght % 8));
